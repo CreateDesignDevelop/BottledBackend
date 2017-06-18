@@ -1,0 +1,148 @@
+body, html{
+  padding: 0;
+  margin: 0;
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+.content{
+  /*opacity: 0.9;*/
+  background-image: radial-gradient(50% 100%, #DBFFFF 0%, #427C7E 100%);
+  width: 100%;
+  height: 100%;
+  padding: 20px 15px;
+  overflow: hidden;
+  /*position: absolute;*/
+  min-height: 100vh;
+}
+.world-map-background{
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 200%;
+  height: 100%;
+  z-index: -1;
+  animation: move-map 80s infinite;
+  opacity: 0;
+}
+@keyframes move-map{
+  0% {
+    opacity: 0;
+    transform: translateX(0%);
+  }
+  5% {
+    opacity: 1;
+  }
+  95% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+    transform: translateX(-50%);
+  }
+}
+.logo-bottled{
+  position: fixed;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  width: 200px;
+}
+.logo-apple{
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  margin: auto;
+  width: 120px;
+}
+.nav{
+  position: absolute;
+  right: 20px;
+  top: 20px;
+  z-index: 999;
+}
+.nav li{
+  display: inline-block;
+}
+.nav li:hover{
+}
+.nav a{
+  color: white!important;
+}
+.nav a:hover,.nav a:focus,.nav a:active{
+  color: white!important;
+  background-color: transparent!important;
+}
+#adminContent{
+  margin-top: 100px;
+}
+.go-to-table-button{
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.8);
+  margin: auto;
+  max-width: 900px;
+  font-size: 18px;
+  color: #ccc;
+  display: block;
+  margin-bottom: 20px;
+  transition: all .3s;
+}
+.go-to-table-button:nth-child(1){
+  border-left: solid 3px #89d2d2;
+}
+.go-to-table-button:nth-child(2){
+  border-left: solid 3px #cb9efd;
+}
+.table{
+  max-width: 900px;
+  margin: auto;
+  margin-top: 100px;
+}
+.go-to-table-button:hover,.go-to-table-button:active,.go-to-table-button:focus{
+  color: black;
+  text-decoration: none;
+}
+.table-striped>tbody>tr:nth-of-type(even){
+  background-color: rgba(249, 249, 249, 0.52);
+}
+.panel{
+  max-width: 900px;
+  margin: auto;
+  margin-top: 100px;
+  /*border: none;*/
+  border-radius: 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  border-left: solid 3px #89d2d2;
+}
+.panel-default>.panel-heading{
+  background-color: transparent;
+  border: none;
+}
+.table-bottles{
+  border-left: solid 3px #89d2d2;
+}
+.table-users{
+  border-left: solid 3px #cb9efd;
+}
+.btn-delete{
+  background-color: rgb(233, 143, 134);
+  color: white;
+  transition: all .3s;
+}
+.btn-delete:hover{
+  background-color: rgb(230, 111, 99);
+  color: white;
+}
+
+@media all and (max-width: 425px) {
+  .nav{
+    display: none;
+  }
+  .logo-bottled{
+    position: absolute;
+  }
+  .logo-apple{
+    position: absolute;
+  }
+}
