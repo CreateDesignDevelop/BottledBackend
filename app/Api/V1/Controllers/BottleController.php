@@ -33,8 +33,8 @@ class BottleController extends Controller
         if( ! $bottles ) {
             return [ "message" => "no bottles where found"];
         }
-        // $bottles->public = 'false';
-        // $this->currentUser()->bottles()->save($bottles);
+        $bottles->public = 'false';
+        $this->currentUser()->bottles()->save($bottles);
 
         $user = User::where('id', $bottles->user_id)->first();
         return ["bottles" => $bottles->toArray(), "user" => $user->toArray()];
